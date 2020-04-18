@@ -17,158 +17,172 @@
 
 <body>
 
-    <div class="surveyQuestions">
-        <h3>Survey Questions</h3>
-        <hr>
-        <h4>About You</h4>
-        <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s12">
-                      <input id="name" type="text" class="validate" required>
-                      <label for="name">Name (Required)</label>
-                    </div>
-                    <div class="input-field col s12">
-                      <input id="photo" type="text" class="validate" required>
-                      <label for="photo">Link to Photo Image (Required)</label>
-                    </div>
+    <div class="container">
+        <h3 class="center-align"><i class='fas fa-dog'></i>Survey Questions</h3>
+        <br>
+        <h4 class="center-align">About Your Pup</h4>
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="name" type="text" class="validate" required>
+                    <label for="name">Name (Required)</label>
                 </div>
-            </form> 
-        </div>
-        
-        <hr>
 
-        <div class="input-field col s12">
-            <h4>Question 1</h4>
-            <h5>Your pup loves to sleep in late</h5>
-            <select>
-              <option value="" disabled selected>Choose your option</option>
-              <option value="1">1 (Strongly Disagree)</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5 (Strongly Agree)</option>
-            </select>
-        </div>
+                <div class="input-field col s6">
+                    <input id="photo" type="text" class="validate" required>
+                    <label for="photo">Link to Photo Image (Required)</label>
+                </div>
+            </div>
+        </form> 
 
-        <div class="input-field col s12">
-            <h4>Question 2</h4>
-            <h5>Your pup loves to sleep in late</h5>
-            <select>
-              <option value="" disabled selected>Choose your option</option>
-              <option value="1">1 (Strongly Disagree)</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5 (Strongly Agree)</option>
-            </select>
-        </div>
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                    <h4>Question 1</h4>
+                    <h5>Your pup loves to sleep in late</h5>
+                    <select id="q1">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
 
-        <div class="input-field col s12">
-            <h4>Question 3</h4>
-            <h5>Your pup loves to sleep in late</h5>
-            <select>
-              <option value="" disabled selected>Choose your option</option>
-              <option value="1">1 (Strongly Disagree)</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5 (Strongly Agree)</option>
-            </select>
-        </div>
+                <div class="input-field col s6">
+                    <h4>Question 2</h4>
+                    <h5>Your pup loves to be play games</h5>
+                    <select id="q2">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
 
-        <div class="input-field col s12">
-            <h4>Question 4</h4>
-            <h5>Your pup loves to sleep in late</h5>
-            <select>
-              <option value="" disabled selected>Choose your option</option>
-              <option value="1">1 (Strongly Disagree)</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5 (Strongly Agree)</option>
-            </select>
-        </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <h4>Question 3</h4>
+                    <h5>Your pup loves to take long walks</h5>
+                    <select id="q3">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
 
-        <div class="input-field col s12">
-            <h4>Question 5</h4>
-            <h5>Your pup loves to sleep in late</h5>
-            <select>
-              <option value="" disabled selected>Choose your option</option>
-              <option value="1">1 (Strongly Disagree)</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5 (Strongly Agree)</option>
-            </select>
-        </div>
+                <div class="input-field col s6">
+                    <h4>Question 4</h4>
+                    <h5>Your pup loves to stare out the window</h5>
+                    <select id="q4">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
 
-        <div class="input-field col s12">
-            <h4>Question 6</h4>
-            <h5>Your pup loves to sleep in late</h5>
-            <select>
-              <option value="" disabled selected>Choose your option</option>
-              <option value="1">1 (Strongly Disagree)</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5 (Strongly Agree)</option>
-            </select>
-        </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <h4>Question 5</h4>
+                    <h5>Your pup loves to lay around and daydream</h5>
+                    <select id="q5">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
 
-        <div class="input-field col s12">
-            <h4>Question 7</h4>
-            <h5>Your pup loves to sleep in late</h5>
-            <select>
-              <option value="" disabled selected>Choose your option</option>
-              <option value="1">1 (Strongly Disagree)</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5 (Strongly Agree)</option>
-            </select>
-        </div>
+                <div class="input-field col s6">
+                    <h4>Question 6</h4>
+                    <h5>Your pup loves to snack a lot</h5>
+                    <select id="q6">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
 
-        <div class="input-field col s12">
-            <h4>Question 8</h4>
-            <h5>Your pup loves to sleep in late</h5>
-            <select>
-              <option value="" disabled selected>Choose your option</option>
-              <option value="1">1 (Strongly Disagree)</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5 (Strongly Agree)</option>
-            </select>
-        </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <h4>Question 7</h4>
+                    <h5>Your pup loves to take lots of naps</h5>
+                    <select id="q7">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
 
-        <div class="input-field col s12">
-            <h4>Question 9</h4>
-            <h5>Your pup loves to sleep in late</h5>
-            <select>
-              <option value="" disabled selected>Choose your option</option>
-              <option value="1">1 (Strongly Disagree)</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5 (Strongly Agree)</option>
-            </select>
-        </div>
+                <div class="input-field col s6">
+                    <h4>Question 8</h4>
+                    <h5>Your pup loves to people watch</h5>
+                    <select id="q8">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
 
-        <div class="input-field col s12">
-            <h4>Question 10</h4>
-            <h5>Your pup loves to sleep in late</h5>
-            <select>
-              <option value="" disabled selected>Choose your option</option>
-              <option value="1">1 (Strongly Disagree)</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5 (Strongly Agree)</option>
-            </select>
+            <div class="row">
+                <div class="input-field col s6">
+                    <h4>Question 9</h4>
+                    <h5>Your pup loves to listen to music</h5>
+                    <select id="q9">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <div class="input-field col s6">
+                    <h4>Question 10</h4>
+                    <h5>Your pup loves to watch tv</h5>
+                    <select id="q10">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+        </form> 
+
+        <div class="center-align">
+            <button class="btn waves-effect waves-light" type="submit" name="action">submit<i class="material-icons right">send</i></button>
         </div>
-        
     </div>    
+
+    <br>
 
     <footer class="footer">
         <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/hungle913/FriendFinder">GitHub Repo</a>

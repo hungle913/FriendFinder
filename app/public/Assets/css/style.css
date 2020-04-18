@@ -1,7 +1,7 @@
 .container {
     position: relative;
     width: 100%;
-    height: 444px;
+    /* height: 444px; */
 }
 
 .container::before {
@@ -12,7 +12,7 @@
     right: 0px;
     bottom: 0px;
     left: 0px;
-    opacity: 0.2;
+    opacity: 0.15;
 }
 
 h1 {
@@ -29,9 +29,36 @@ h2 {
     font-weight: bold;
 }
 
+h3 {
+    font-size: 50px;
+    color: #4db6ac;
+    position: relative;
+    font-weight: bold;
+
+}
+
+h4 {
+    font-size: 30px;
+    color: #4db6ac;
+    position: relative;
+    font-weight: bold;
+}
+
+h5 {
+    font-size: 20px;
+    color: #4db6ac;
+    position: relative;
+    font-weight: bold;
+}
+
 .footer {
     box-sizing: inherit;
     max-width: 1280px;
     margin: auto;
+}
+
+.input-field.col label {
+    font-weight: bold;
+    color: #4db6ac;
 }
 
