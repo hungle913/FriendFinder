@@ -37,6 +37,19 @@
         </div>
         
         <hr>
+
+        <div class="input-field col s12">
+            <h4>Question 1</h4>
+            <h5>Your pup loves to sleep in late</h5>
+            <select>
+              <option value="" disabled selected>Choose your option</option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
         
     </div>    
 
@@ -44,7 +57,11 @@
         <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/hungle913/FriendFinder">GitHub Repo</a>
     </footer>
 
-
+    <script>
+        $(document).ready(function(){
+            $('select').formSelect();
+        });
+    </script>
 
 </body>
 
