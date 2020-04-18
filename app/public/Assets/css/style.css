@@ -1,0 +1,36 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 444px;
+}
+
+.container::before {
+    content: "";
+    background-image: url(../images/doggos.png);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.2;
+}
+
+h1 {
+    font-size: 60px;
+    color: #4db6ac;
+    position: relative;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 35px;
+    color: #4db6ac;
+    position: relative;
+    font-weight: bold;
+}
+
+.footer {
+    box-sizing: inherit;
+    max-width: 1280px;
+    margin: auto;
+}
