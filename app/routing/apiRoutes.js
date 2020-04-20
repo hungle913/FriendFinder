@@ -13,8 +13,14 @@ module.exports = function(app) {
 
     //Add a new pup friend
     app.post("/api/friends", function(req, res) {
+        //variable to capture user input
         var userInput = req.body
         // console.log("User input = " + JSON.stringify(userInput));
-    })
 
-}
+        var userScores = userInput.scores;
+        // console.log("User Scores = " + userScores);
+
+
+    });
+
+};
