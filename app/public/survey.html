@@ -188,6 +188,19 @@
         <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/hungle913/FriendFinder">GitHub Repo</a>
     </footer>
 
+    <!-- Modal Display box showing closest pup match -->
+	<div id="modal1" class="modal">
+		<div class="modal-content">
+			<h4>Closest PUP Match</h4>
+			<div class="divider"></div>
+			<h5 id="pupMatch"></h5>
+			<img id="pupImage" class="materialboxed" width="650" src="">
+		</div>
+		<div class="modal-footer">
+			<a href="/survey" class="modal-action modal-close waves-effect waves-green btn-flat">Find another!</a>
+		</div>
+	</div>
+
     <script>
         $(document).ready(function(){
             //Materialize jquery for survey question options
