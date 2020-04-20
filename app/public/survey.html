@@ -178,7 +178,7 @@
         </form> 
 
         <div class="center-align">
-            <button class="btn waves-effect waves-light" type="submit" name="action">submit<i class="material-icons right">send</i></button>
+            <button id="submitButton" class="btn waves-effect waves-light" type="submitButton" name="action">submit<i class="material-icons right">send</i></button>
         </div>
     </div>    
 
@@ -204,7 +204,30 @@
             });
         });
 
-        
+        //Activate submit button
+        $("#submitButton").on("click", function(event) {
+            event.preventDefault();
+
+            var userInput = {
+                name: $("#name").val().trim(),
+                photo: $("#photo").val().trim(),
+                scores: [
+                    $("#q1").val().trim(),
+                    $("#q2").val().trim(),
+                    $("#q3").val().trim(),
+                    $("#q4").val().trim(),
+                    $("#q5").val().trim(),
+                    $("#q6").val().trim(),
+                    $("#q7").val().trim(),
+                    $("#q8").val().trim(),
+                    $("#q9").val().trim(),
+                    $("#q10").val().trim()
+                ]
+            };
+
+            console.log('userInput = ' + JSON.stringify(userInput));
+
+        })
     </script>
 
 </body>
