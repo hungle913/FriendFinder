@@ -190,8 +190,21 @@
 
     <script>
         $(document).ready(function(){
+            //Materialize jquery for survey question options
             $('select').formSelect();
+
+            //Materialize jquery for Modal
+            $('.modal').modal( {
+                opacity: .5, //Opacity of modal overlay
+                inDuration: 250, //Transition in duration in milliseconds
+                outDuration: 250, //Transition out duration in milliseconds
+                dismissible: false, //Allow modal to be dismissed by clicking outside of modal
+                startingTop: '4%', //Starting top offset
+                endingTop: '10%', //Ending top offset
+            });
         });
+
+        
     </script>
 
 </body>
