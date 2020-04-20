@@ -20,7 +20,21 @@ module.exports = function(app) {
         var userScores = userInput.scores;
         // console.log("User Scores = " + userScores);
 
+        //variables for matches
+        var matchName = '';
+        var matchImage = '';
+        var totalDifference = 100
 
+        //For loop to go through all friends in list
+        for (var i = 0; i <friendsData.length; i++) {
+            //calculate diff for each question
+            var diff = 0
+            for (var h = 0; h < userScores.length; h++) {
+                diff += Math.abs(friendsData[i].scores[h] - userScores[h]);
+           }
+           
+           console.log('Diff = ' + diff);
+        };
     });
 
 };
