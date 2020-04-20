@@ -240,7 +240,19 @@
 
             console.log('userInput = ' + JSON.stringify(userInput));
 
-        })
+            //post user input to friends list
+            $.post('/api/friends', userInput).done(function(data) {
+                //console.log('response = ' + JSON.stringify(data));
+
+                // Set values for friends match
+                $('#pupMatch').html(data.matchName);
+                $('#pupImage').html(data.matchImage);
+
+                //Open modal
+                $('#modal1').modal('open');
+            });
+
+        });
     </script>
 
 </body>
