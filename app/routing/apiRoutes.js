@@ -13,33 +13,21 @@ module.exports = function(app) {
 
     //Add a new pup friend
     app.post("/api/friends", function(req, res) {
-        //variable to capture user input
-        var userInput = req.body
-        // console.log("User input = " + JSON.stringify(userInput));
-
-        var userScores = userInput.scores;
-        // console.log("User Scores = " + userScores);
-
-        //variables for matches
-        var matchName = '';
-        var matchImage = '';
-        var difference = [];
-        //For loop to go through all friends in list
-        for (var i = 0; i <friendsData.length; i++) {
-            //calculate diff for each question
-            var diff = 0;
-            for (var h = 0; h < userScores.length; h++) {
-                diff += Math.abs(friendsData[i].scores[h] - userScores[h]);     
-           }
-           console.log("Difference = " + diff);
-           difference.push(diff);
-        //    console.log("Difference Array = " + difference);
-
+        //create variable to store new pup
+        var newPup = {
+            name: req.body.name,
+            photo: req.body.photo,
+            scores:[]
         };
-        console.log("Difference Array = " + difference);
-        var match = Math.min(...difference);
-        console.log("Closest Match is = " + match);
+
+        //create new array to store new pup score
+        var scoresArray = [];
+        for (var i=0; i < req.body.scores.length; i++) {
+            scores.Array.push(parseInt(req.body.scores[i]))
+        }
+        newPup.scores = scoresArray;
+
+        
 
     });
-
 };
