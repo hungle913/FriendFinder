@@ -6,7 +6,7 @@
 
 .container::before {
     content: "";
-    background-image: url(../images/doggos.png);
+    background-image: url(https://github.com/hungle913/FriendFinder/blob/master/app/public/Assets/images/doggos.png?raw=true);
     position: absolute;
     top: 0px;
     right: 0px;

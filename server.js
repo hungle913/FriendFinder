@@ -1,6 +1,6 @@
-//require express package
+//require packages
 var express = require("express");
-
+var path = require('path')
 
 // Tells node that we are creating an "express" server
 var app = express();
@@ -15,6 +15,10 @@ app.use(express.json());
 //routes to the site
 require("./app/routing/apiRoutes")(app);
 require("./app/routing/html.Routes")(app);
+
+app.use(express.static("."));
+app.use(express.static(path.join(__dirname, '/public')));
+
 
 //Start the server
 app.listen(PORT, function() {
