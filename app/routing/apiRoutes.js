@@ -30,25 +30,21 @@ module.exports = function(app) {
             var diff = 0;
             for (var h = 0; h < userScores.length; h++) {
                 diff += Math.abs(friendsData[i].scores[h] - userScores[h]);     
-           }
-           console.log("Difference = " + diff);
-           difference.push(diff);
-        //    console.log("Difference Array = " + difference);
-
+            }
+            // console.log("Difference = " + diff);
+            difference.push(diff);
+            console.log("Difference Array = " + difference);
         };
-        console.log("Difference Array = " + difference);
-        var match = Math.min(...difference);
-        console.log("Closest Match is = " + match);
 
-        if (match = diff) {
-            matchName = friendsData[i].name;
-            console.log("Pup Name is = " + friendsData[i].name);
-            matchImage = friendsData[i].photo;
-             console.log("Pup Name is = " + friendsData[i].name);
-        };
-        friendsData.push(newFriend);
-        res.json(match)
-        console.log(match);
+        // Determine best match using position of best match in friendsData array
+        var bestMatchPosition = 0;
+        for (var i = 1; i < difference.length; i++) {
+            //Lower number in comparison is better match
+            if(difference[i] < difference[bestMatchPosition]){
+                bestMatchPosition = i;
+            }
+        }
+
 
     });
 };
