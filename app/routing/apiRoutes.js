@@ -53,6 +53,14 @@ module.exports = function(app) {
         // Replay with JSON object of best Pup match
         res.json(bestPupMatch)
 
+        bestPupMatch.name = matchName;
+        bestPupMatch.photo = matchImage;
+
+		// Add new user
+		friends.push(userInput);
+
+		// Send appropriate response
+		res.json({status: 'OK', matchName: matchName, matchImage: matchImage});
 
     });
 };
