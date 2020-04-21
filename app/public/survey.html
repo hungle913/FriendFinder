@@ -194,7 +194,7 @@
 			<h4>Closest PUP Match</h4>
 			<div class="divider"></div>
 			<h5 id="pupMatch"></h5>
-			<img id="pupImage" class="materialboxed" width="650" src="">
+			<img id="pupImage" class="materialboxed" width="650" height="1000" src="">
 		</div>
 		<div class="modal-footer">
 			<a href="/survey" class="modal-action modal-close waves-effect waves-green btn-flat">Find another!</a>
@@ -241,12 +241,15 @@
             console.log('userInput = ' + JSON.stringify(userInput));
 
             //post user input to friends list
-            $.post('/api/friends', userInput).done(function(data) {
-                //console.log('response = ' + JSON.stringify(data));
+            $.post('/api/friends', userInput)
+
+            //once done return data from routes
+            .done(function(data) {
+                console.log('response = ' + JSON.stringify(data));
 
                 // Set values for friends match
-                $('#pupMatch').html(data.matchName);
-                $('#pupImage').html(data.matchImage);
+                $('#pupMatch').html(data.name);
+                $('#pupImage').attr("src", data.photo);
 
                 //Open modal
                 $('#modal1').modal('open');

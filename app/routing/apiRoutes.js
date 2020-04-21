@@ -21,8 +21,6 @@ module.exports = function(app) {
         // console.log("User Scores = " + userScores);
 
         //variables for matches
-        var matchName = '';
-        var matchImage = '';
         var difference = [];
         //For loop to go through all friends in list
         for (var i = 0; i <friendsData.length; i++) {
@@ -46,21 +44,18 @@ module.exports = function(app) {
         }
 
         // IF 2 friends have same comparison, then newest entry is chosen
-        var bestPupMatch = friendsData[bestMatchPosition];
+        bestPupMatch = friendsData[bestMatchPosition];
         console.log("Best Pup is = " + bestPupMatch.name);
         console.log("Best Pup is = " + bestPupMatch.photo);
 
-        // Replay with JSON object of best Pup match
-        res.json(bestPupMatch)
-
-        bestPupMatch.name = matchName;
-        bestPupMatch.photo = matchImage;
-
-		// Add new user
-		friends.push(userInput);
+            // Replay with JSON object of best Pup match
+            // res.json(bestPupMatch)
 
 		// Send appropriate response
-		res.json({status: 'OK', matchName: matchName, matchImage: matchImage});
+        res.json(bestPupMatch);
+        
+        // Add new user
+		friendsData.push(userInput);
 
     });
 };
