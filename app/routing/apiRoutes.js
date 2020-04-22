@@ -31,7 +31,7 @@ module.exports = function(app) {
             }
             // console.log("Difference = " + diff);
             difference.push(diff);
-            console.log("Difference Array = " + difference);
+            // console.log("Difference Array = " + difference);
         };
 
         // Determine best match using position of best match in friendsData array
@@ -45,8 +45,8 @@ module.exports = function(app) {
 
         // IF 2 friends have same comparison, then newest entry is chosen
         bestPupMatch = friendsData[bestMatchPosition];
-        console.log("Best Pup is = " + bestPupMatch.name);
-        console.log("Best Pup is = " + bestPupMatch.photo);
+        // console.log("Best Pup is = " + bestPupMatch.name);
+        // console.log("Best Pup is = " + bestPupMatch.photo);
 
             // Replay with JSON object of best Pup match
             // res.json(bestPupMatch)
