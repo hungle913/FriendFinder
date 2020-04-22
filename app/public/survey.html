@@ -44,7 +44,7 @@
                 <div class="input-field col s6">
                     <h4>Question 1</h4>
                     <h5>Your pup loves to sleep in late</h5>
-                    <select id="q1">
+                    <select id="q1" class = "surveyQuestions">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -57,7 +57,7 @@
                 <div class="input-field col s6">
                     <h4>Question 2</h4>
                     <h5>Your pup loves to be play games</h5>
-                    <select id="q2">
+                    <select id="q2" class = "surveyQuestions">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -72,7 +72,7 @@
                 <div class="input-field col s6">
                     <h4>Question 3</h4>
                     <h5>Your pup loves to take long walks</h5>
-                    <select id="q3">
+                    <select id="q3" class = "surveyQuestions">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -85,7 +85,7 @@
                 <div class="input-field col s6">
                     <h4>Question 4</h4>
                     <h5>Your pup loves to stare out the window</h5>
-                    <select id="q4">
+                    <select id="q4" class = "surveyQuestions">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -100,7 +100,7 @@
                 <div class="input-field col s6">
                     <h4>Question 5</h4>
                     <h5>Your pup loves to lay around and daydream</h5>
-                    <select id="q5">
+                    <select id="q5" class = "surveyQuestions">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -113,7 +113,7 @@
                 <div class="input-field col s6">
                     <h4>Question 6</h4>
                     <h5>Your pup loves to snack a lot</h5>
-                    <select id="q6">
+                    <select id="q6" class = "surveyQuestions">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -128,7 +128,7 @@
                 <div class="input-field col s6">
                     <h4>Question 7</h4>
                     <h5>Your pup loves to take lots of naps</h5>
-                    <select id="q7">
+                    <select id="q7" class = "surveyQuestions">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -141,7 +141,7 @@
                 <div class="input-field col s6">
                     <h4>Question 8</h4>
                     <h5>Your pup loves to people watch</h5>
-                    <select id="q8">
+                    <select id="q8" class = "surveyQuestions">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -156,7 +156,7 @@
                 <div class="input-field col s6">
                     <h4>Question 9</h4>
                     <h5>Your pup loves to listen to music</h5>
-                    <select id="q9">
+                    <select id="q9" class = "surveyQuestions">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -169,7 +169,7 @@
                 <div class="input-field col s6">
                     <h4>Question 10</h4>
                     <h5>Your pup loves to watch tv</h5>
-                    <select id="q10">
+                    <select id="q10" class = "surveyQuestions">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
@@ -229,20 +229,20 @@
                 name: $("#name").val().trim(),
                 photo: $("#photo").val().trim(),
                 scores: [
-                    $("#q1").val().trim(),
-                    $("#q2").val().trim(),
-                    $("#q3").val().trim(),
-                    $("#q4").val().trim(),
-                    $("#q5").val().trim(),
-                    $("#q6").val().trim(),
-                    $("#q7").val().trim(),
-                    $("#q8").val().trim(),
-                    $("#q9").val().trim(),
-                    $("#q10").val().trim()
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val(),
+                    $("#q6").val(),
+                    $("#q7").val(),
+                    $("#q8").val(),
+                    $("#q9").val(),
+                    $("#q10").val()
                 ]
             };
 
-            console.log('userInput = ' + JSON.stringify(userInput));
+            // console.log('userInput = ' + JSON.stringify(userInput));
 
             //post user input to friends list
             $.post('/api/friends', userInput)
@@ -251,14 +251,54 @@
             .done(function(data) {
                 // console.log('response = ' + JSON.stringify(data));
 
-                // Set values for friends match
-                $('#pupMatch').html(data.name);
-                $('#pupImage').attr("src", data.photo);
+                //Check if questions are completely answered
+                    
+                if ($("#name").val().trim() === "") {
+                    alert("Please enter name of pup.");
+                    
+                } else if ($("#photo").val().trim() === "") {
+                    alert("Please provide photo of pup.");
+                    
+                } else if (!$("#q1").val()) {
+                    alert("Please answer Question 1");
+                    
+                } else if (!$("#q2").val()) {
+                    alert("Please answer Question 2");
+                    
+                } else if (!$("#q3").val()) {
+                    alert("Please answer Question 3");
+                    
+                } else if (!$("#q4").val()) {
+                    alert("Please answer Question 4");
+                    
+                } else if (!$("#q5").val()) {
+                    alert("Please answer Question 5");
+                    
+                } else if (!$("#q6").val()) {
+                    alert("Please answer Question 6");
+                    
+                } else if (!$("#q7").val()) {
+                    alert("Please answer Question 7");
+                    
+                } else if (!$("#q8").val()) {
+                    alert("Please answer Question 8");
+                    
+                } else if (!$("#q9").val()) {
+                    alert("Please answer Question 9");
+                    
+                } else if (!$("#q10").val()) {
+                    alert("Please answer Question 10");
+                    
+                }else{
+                    //If form is completely filled out
+                    // Set values for friends match
+                    $('#pupMatch').html(data.name);
+                    $('#pupImage').attr("src", data.photo);
 
-                //Open modal
-                $('#modal1').modal('open');
+                    //Open modal
+                    $('#modal1').modal('open');
+                }
             });
-
         });
     </script>
 
