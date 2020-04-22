@@ -16,9 +16,13 @@ app.use(express.json());
 require("./app/routing/apiRoutes")(app);
 require("./app/routing/html.Routes")(app);
 
-// app.use(express.static("."));
-app.use(express.static(__dirname + '/public'))
-// app.use(express.static(path.join(__dirname, '/public/')));
+// For serving of static CSS
+app.use(express.static(__dirname + "/app/css"));
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.text());
+app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 
 //Start the server
