@@ -43,16 +43,13 @@ module.exports = function(app) {
             }
         }
 
-        // IF 2 friends have same comparison, then newest entry is chosen
+        //Set best match
         bestPupMatch = friendsData[bestMatchPosition];
         // console.log("Best Pup is = " + bestPupMatch.name);
         // console.log("Best Pup is = " + bestPupMatch.photo);
 
-            // Replay with JSON object of best Pup match
-            // res.json(bestPupMatch)
-
-		// Send appropriate response
-        res.json(bestPupMatch);
+        // Replay with JSON object of best Pup match
+        res.json(bestPupMatch)
         
         // Add new user
 		friendsData.push(userInput);
