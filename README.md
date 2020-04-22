@@ -6,7 +6,7 @@ A compatibility-based "Friend Finder" application for your pup. User will answer
 
 ## To use the app
 
-This application is hosted on Heroku: [CLICK ME!](https://github.com/hungle913/FriendFinder) Answer the 10-question survey and find a friend for your pup!
+This application is hosted on Heroku: [CLICK ME!](https://glacial-reef-11119.herokuapp.com/survey) Answer the 10-question survey and find a friend for your pup!
 
 ## Screen Shots
 
