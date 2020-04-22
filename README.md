@@ -14,10 +14,10 @@ This application is hosted on Heroku: [CLICK ME!](https://glacial-reef-11119.her
 ![Home](https://github.com/hungle913/FriendFinder/blob/master/app/public/Assets/images/Home.PNG?raw=true "Home Screen")
 
 #### Survey Screen
-![Survey](https://github.com/hungle913/FriendFinder/blob/master/app/public/Assets/images/Home.PNG?raw=true "Survey Screen")
+![Survey](https://github.com/hungle913/FriendFinder/blob/master/app/public/Assets/images/Survey.PNG?raw=true "Survey Screen")
 
 #### Pup Match
-![Match](https://github.com/hungle913/FriendFinder/blob/master/app/public/Assets/images/Home.PNG?raw=true "Pup Match")
+![Match](https://github.com/hungle913/FriendFinder/blob/master/app/public/Assets/images/Match.PNG?raw=true "Pup Match")
 
 ## Technologies Used
 
