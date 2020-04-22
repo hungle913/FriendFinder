@@ -17,7 +17,7 @@ require("./app/routing/apiRoutes")(app);
 require("./app/routing/html.Routes")(app);
 
 app.use(express.static("."));
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, '/public/')));
 
 
 //Start the server
