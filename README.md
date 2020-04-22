@@ -6,17 +6,27 @@ A compatibility-based "Friend Finder" application for your pup. User will answer
 
 ## To use the app
 
-This application is hosted on Heroku: Click Me! Answer the 10-question survey and find a friend for your pup!
+This application is hosted on Heroku: [CLICK ME!](https://github.com/hungle913/FriendFinder) Answer the 10-question survey and find a friend for your pup!
 
 ## Screen Shots
 
 #### Home Screen
+![Home](https://github.com/hungle913/FriendFinder/blob/master/app/public/Assets/images/Home.PNG?raw=true "Home Screen")
 
 #### Survey Screen
+![Survey](https://github.com/hungle913/FriendFinder/blob/master/app/public/Assets/images/Home.PNG?raw=true "Survey Screen")
 
 #### Pup Match
+![Match](https://github.com/hungle913/FriendFinder/blob/master/app/public/Assets/images/Home.PNG?raw=true "Pup Match")
 
 ## Technologies Used
+
+* HTML
+* CSS
+* Javascript
+* Express
+* Node
+* JSON
 
 ## Built With
 
