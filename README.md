@@ -1,4 +1,4 @@
-# Friend Finder
+# Pup Finder
 
 ## Introduction
 
